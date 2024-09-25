@@ -11,40 +11,28 @@
 
 
     <div class="projects-list center-row">
-        <div class="project-card">
 
-            <a href="https://github.com/" target="_blank">
-            <img src="{% static './img/picture-1.jpg' %}" alt="">
-            <p>Project 1</p>
-            <p>Description</p>
-            <p>2024</p>
+        {% for project in projects %}
+            <div class="project-card">
+
+                <a href="{{ project.repository }}" target="_blank">
+                    <img src="{{ project.image }}" alt="">
+                    <p>{{ project.name }}</p>
+                    <p>{{ project.description }}</p>
+                    <p>{{ project.year }}</p>
 
             <div class="project-skills">
-                <label class="text-label">Skills 1</label>
-                <label class="text-label">Skills 2</label>
-                <label class="text-label">Skills 3</label>
-                <label class="text-label">Skills 4</label>
-                <label class="text-label">Skills 5</label>
+
+                {% for skill in project.skills.all  %}
+
+                <label class="text-label">{{ skill.name }}</label>
+                
+                {% endfor %}
             </div>
             </a>
         </div>
-        <div class="project-card">
-
-            <a href="https://github.com/" target="_blank">
-            <img src="{% static './img/picture-1.jpg' %}" alt="">
-            <p>Project 2</p>
-            <p>Description</p>
-            <p>2024</p>
-
-            <div class="project-skills">
-                <label class="text-label">Skills 1</label>
-                <label class="text-label">Skills 2</label>
-                <label class="text-label">Skills 3</label>
-                <label class="text-label">Skills 4</label>
-                <label class="text-label">Skills 5</label>
-            </div>
-            </a>
-        </div>
+        {% endfor %}
+    
     </div>
 </section>
 
