@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Experience
 
 def projects_list(request):
 
@@ -12,4 +12,13 @@ def projects_list(request):
     )
 
 def experience_list(request):
-    return render(request, "content/experience_list.html")
+
+    experiences = Experience.objects.all()
+
+    return render(request, "content/experience_list.html",
+    {"experiences" : experiences}
+    )
+
+        
+
+

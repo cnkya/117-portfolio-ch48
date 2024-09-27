@@ -40,6 +40,10 @@
 
 .projects-list {    
     margin: 2rem 0px;
+   
+    flex-wrap: wrap;
+    gap: 8rem;
+    align-items: baseline;
 }
 
 .project-card {
@@ -53,7 +57,7 @@
     border: solid 1px var(--primary-color);
 }
 
-.project-card image{
+.project-card img{
     width: 100%;
 }
 .project-skills {
@@ -81,6 +85,7 @@ a p:nth-child(4) {
 
 .experience-list {    
     margin: 2rem 0px;
+    align-items: baseline;
 }
 
 .experience-card {
@@ -88,6 +93,9 @@ a p:nth-child(4) {
     display: flex;
     flex-wrap: wrap;
     padding: 0.5rem;
+    flex-direction: column;
+    
+    
     
 }
 .experience-card:hover {
@@ -95,7 +103,7 @@ a p:nth-child(4) {
     border: solid 1px var(--primary-color);
 }
 
-.experience-card image {
+.experience-card img {
     width: 100%;
 }
 

@@ -11,58 +11,29 @@
 
 
     <div class="experience-list center-row">
+        {% for experience in experiences %}
         <div class="experience-card">
         
-            <p>Name of School or Company</p>
-            <p>Course Name/Job Title</p>
-            <p>Short description about course or company. No more than 5 lines</p>
-            <p>Month-Month 2024</p>
+            <p>{{ experience.name }}</p>
+            <p>{{ experience.title }}</p>
+            <p>{{ experience.description }}</p>
+            <p>{{ experience.month }}{{ experience.year }}</p>
 
             <div class="experience-skills">
-                <label class="text-label">Skills 1</label>
-                <label class="text-label">Skills 2</label>
-                <label class="text-label">Skills 3</label>
-                <label class="text-label">Skills 4</label>
-                <label class="text-label">Skills 5</label>
+
+                {% for skill in experience.skills.all %}
+                <label class="text-label">{{ skill.name }} 1</label>
+                {% endfor %}
             </div>
             
         </div>
-        <div class="experience-card">
         
-            <p>Name of School or Company</p>
-            <p>Course Name/Job Title</p>
             
-            <p>Short description about course or company. No more than 5 lines</p>
-            <p>Month-Month 2024</p>
-
-            <div class="experience-skills">
-                <label class="text-label">Skills 1</label>
-                <label class="text-label">Skills 2</label>
-                <label class="text-label">Skills 3</label>
-                <label class="text-label">Skills 4</label>
-                <label class="text-label">Skills 5</label>
-            </div>
-            
-        </div>
-        <div class="experience-card">
         
-            <p>Name of School or Company</p>
-            <p>Course Name/Job Title</p>
-            <p>Short description about course or company. No more than 5 lines</p>
-            <p>Month-Month 2024</p>
-
-            <div class="experience-skills">
-                <label class="text-label">Skills 1</label>
-                <label class="text-label">Skills 2</label>
-                <label class="text-label">Skills 3</label>
-                <label class="text-label">Skills 4</label>
-                <label class="text-label">Skills 5</label>
-            </div>
-            
-        </div>
         
     
-        </div>
+        
+        {% endfor %}
     </div>
 </section>
 

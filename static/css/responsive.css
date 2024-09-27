@@ -72,7 +72,7 @@
         flex-direction: column;
     }
 
-    }
+    
     .project-card {
         width:100%;
     }
@@ -87,6 +87,7 @@
     .project-card a {
         width: 100%;
     }
+}
 
 
 
