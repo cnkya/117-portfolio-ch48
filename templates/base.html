@@ -42,7 +42,7 @@
                 <a href="{% url 'about' %}">About Me</a>
                 <a href="{% url 'projects_list' %}">Projects</a>
                 <a href="{% url 'experience_list' %}">Experience</a>
-                <a href="#">Contact Me</a>
+                <a href="{% url 'contact' %}">Contact Me</a>
             </div>
         </nav>
 
@@ -59,24 +59,24 @@
         </div>
 
 <!-- Right Section -->
-    <nav class="nav-menu">
+        <nav class="nav-menu">
         <!-- Hamburger Button-->
             <input type="checkbox" id="checkBox">
             <div class="hamburger-btn">
                 <label for="checkBox">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-           </div> 
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </label>
+            </div> 
         <!-- Menu Option-->
         <div class="nav-options center-row">
             <a href="{% url 'about' %}">About Me</a>
             <a href="{% url 'projects_list' %}">Projects</a>
             <a href="{% url 'experience_list' %}">Experience</a>
-            <a href="#">Contact Me</a>
+            <a href="{% url 'contact' %}">Contact Me</a>
         </div>
-    </nav>
+        </nav>
     </footer>
 </body>
 </html>
