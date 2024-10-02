@@ -24,11 +24,11 @@ def contact_view(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
-            email_message = f"Name:{name}\nEmail:{email}\nMessage:\n{message}"
+            email_message = f"Name: {name}\nEmail: {email}\nMessage:\n {message}"
 
             send_mail(
-                "Email from" + name, 
-                message,
+                "Email from: " + name,
+                email_message,
                 email,
                 ["christina.nkya@sdgku.edu"]
 
