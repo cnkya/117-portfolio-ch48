@@ -33,14 +33,13 @@
 /* Projects Section */
 
 .projects-section {
-    
     margin-top: 4rem;
+    
 
 }
 
 .projects-list {    
-    margin: 2rem 0px;
-   
+    margin: 2rem 0px;   
     flex-wrap: wrap;
     gap: 8rem;
     align-items: baseline;
@@ -59,6 +58,7 @@
 
 .project-card img{
     width: 100%;
+    
 }
 .project-skills {
     display: flex;
